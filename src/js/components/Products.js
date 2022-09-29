@@ -1,4 +1,4 @@
-import { select,  templates } from './settings.js';
+import { templates } from '../settings.js';
 import utils from '../utils.js';
 
 class Product{
@@ -9,17 +9,18 @@ class Product{
     thisProduct.renderInMenu();
 
   }
-
+  
   renderInMenu(){
     const thisProduct = this;
     // generate HTML based on template
-    const generatedHTML = templates.productListLeft(thisProduct.data);
+    const generatedHTML = templates.coffeeList(thisProduct.data);
     //create element using utils.createElemnetFromHTML
-    thisProduct.element = utils.createDOMFromHTML(generatedHTML);
+    const generatedDOM = utils.createDOMFromHTML(generatedHTML);
     //find menu container 
-    const menuContainer = document.querySelector(select.containerOf.productListLeft);
+    const menuContainer = document.querySelector('.product-wrapper');
+    console.log(menuContainer);
     // add element to menu 
-    menuContainer.appendChild(thisProduct.element);
+    menuContainer.appendChild(generatedDOM);
   }
 }
 export default Product;

@@ -1,0 +1,17 @@
+/*Products*/
+
+.container-products{
+    display: flex;
+    flex-direction: column;
+}
+.product-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.product-wrapper-coffee{
+    display: flex;
+}
+.product-image img {
+    width: 200px;
+    height: 200px;
+}

@@ -1,17 +1,15 @@
 export const select = {
   templateOf: {
-    productContainerLeft: '#template-product-left',
-    productContainerRight: '#template-product-right',
+    productContainer: '#template-product',
+    
   },
   containerOf: {
-    productOneContainer: '.product-one',
-    productTwoContainer: '.product-one',
-    productThreeContainer: '.product-one'
+    allProducts: 'product-wrapper'
   }
 };
 export const templates = {
-  productListLeft: Handlebars.compile(document.querySelector(select.templateOf.productContainerLeft).innerHTML),
-  productListRight: Handlebars.compile(document.querySelector(select.templateOf.productContainerRight).innerHTML),
+  coffeeList: Handlebars.compile(document.querySelector(select.templateOf.productContainer).innerHTML),
+  
 };
 export const settings = {
   db: {

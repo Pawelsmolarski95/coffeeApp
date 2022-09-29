@@ -1,0 +1,11 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: $font-main;
+    font-size: 14px;
+    line-height: 1.7;
+    color: $color-black;
+}

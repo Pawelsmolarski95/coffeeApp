@@ -1,0 +1,13 @@
+/* header*/
+
+.header-main {
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-position: cover;
+    height: 90vh;
+}
+.header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
