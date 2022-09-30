@@ -10,3 +10,14 @@ body {
   line-height: 1.7;
   color: $color-black;
 }
+
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+}
+footer{
+  text-align: center;
+  padding: 20px ;
+}

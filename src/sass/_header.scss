@@ -12,7 +12,8 @@
     z-index: -1;
     position: absolute;
     opacity: 0.8;
-    filter: contrast(120%);
+    filter: contrast(120%),brightness(0.3);
+    
   }
 }
 
@@ -24,12 +25,6 @@
     
 }
 
-.container{
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-  height: 100%;
-}
 
 .container-header-top{
   margin: 10px 20px;
@@ -53,7 +48,7 @@
   text-decoration: none;
   color: lightgrey;
   text-transform: uppercase;
-  margin-right: 5px;
+  margin-right: 20px;
   letter-spacing: 2px;
 }
 
