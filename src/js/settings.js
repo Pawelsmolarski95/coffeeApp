@@ -4,8 +4,14 @@ export const select = {
     
   },
   containerOf: {
-    allProducts: 'product-wrapper'
+    allProducts: 'product-wrapper',
+    pages: '.pages',
+    navLinks: '.nav',
+    upperArrow: '.upper',
   }
+};
+export const classNames = {
+  hidden: '.hidden',
 };
 export const templates = {
   coffeeList: Handlebars.compile(document.querySelector(select.templateOf.productContainer).innerHTML),
