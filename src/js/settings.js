@@ -6,12 +6,19 @@ export const select = {
   containerOf: {
     allProducts: 'product-wrapper',
     pages: '.pages',
-    navLinks: '.nav',
+    navLinks: '.nav-link',
     upperArrow: '.upper',
+    mostPopular: '.most-popular',
+    contact: '#contact',
+    product: '#product',
+    about: '#about',
+    startingPage: '#product, #about',
+    home: '#home'
   }
 };
 export const classNames = {
-  hidden: '.hidden',
+  hidden: 'hidden',
+  hiddenImage: 'hidden-image',
 };
 export const templates = {
   coffeeList: Handlebars.compile(document.querySelector(select.templateOf.productContainer).innerHTML),

@@ -22,6 +22,20 @@ footer{
   text-align: center;
   padding: 20px ;
 }
+
 .hidden{
+  display: none;
+}
+
+
+.hidden-image{
+  display: none;
+}
+
+.active {
   display: block;
+}
+
+.pages #contact {
+  display: none;
 }

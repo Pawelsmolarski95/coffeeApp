@@ -22,11 +22,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
     
 }
 
 
 .container-header-top{
+  
+
   margin: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -104,5 +107,11 @@
   i{
     font-size: 30px;
     cursor: pointer;
+  }
+
+  a{
+    text-decoration: none;
+    font-size: 28px;
+    color: $color-light;
   }
 }
