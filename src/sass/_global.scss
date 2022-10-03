@@ -23,19 +23,20 @@ footer{
   padding: 20px ;
 }
 
-.hidden{
+.sectionProducts{
   display: none;
 }
-
+.sectionAbout{
+  display: none;
+}
+.sectionContact{
+  display: none;
+}
 
 .hidden-image{
   display: none;
 }
 
 .active {
-  display: block;
-}
-
-.pages #contact {
-  display: none;
+  display: block ;
 }

@@ -34,13 +34,13 @@ const app = {
     
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.containerOf.navLinks);
-
+  
     const idFromHash = window.location.hash.replace('#/', '' );
-    console.log(thisApp.pages[1]);
+    
     let pageMatchingHash = thisApp.pages[0].id;
+    console.log(pageMatchingHash);
     
     for(let page of thisApp.pages) {
-      console.log(page.id);
       if(page.id == idFromHash){
         pageMatchingHash = page.id;
         break;
@@ -52,11 +52,11 @@ const app = {
       link.addEventListener('click', function(event){
         const clickedElement = this;
         event.preventDefault();
-        // get page id from href attribute
+        
         const id = clickedElement.getAttribute('href').replace('#', '');
-        //run app.activePage with this id
+       
         thisApp.activePage(id);
-        //change URL hash
+        
         window.location.hash = '#/' + id;
       });
       
@@ -65,29 +65,38 @@ const app = {
   },
   activePage: function(pageId){
     const thisApp = this;
-    //add class active to maching page, remove this class from non-maching
-    for(let page of thisApp.pages) {
+    
+    thisApp.products = document.querySelector(select.containerOf.product);
+    thisApp.contact = document.querySelector(select.containerOf.contact);
+    thisApp.about = document.querySelector(select.containerOf.about);
+    
+    for(let page of thisApp.pages){
+      page.classList.remove(classNames.activePage);
       
-      page.classList.toggle('active', page.id == pageId);
+      if (pageId == 'home') {
+        thisApp.about.classList.add(classNames.activePage);
+        thisApp.products.classList.add(classNames.activePage);
+        
+      } else if (pageId == 'products')  {
+        thisApp.products.classList.add(classNames.activePage);
+        
+      } else if (pageId == 'contact') {
+        thisApp.contact.classList.add(classNames.activePage);
+      }  
+      
+    } 
+    for(let link of thisApp.navLinks) {
+      link.getAttribute('href') == '#' + pageId;
     }
-    //add class active to maching page, remove this class from non-maching
-    // for(let link of thisApp.navLinks) {
-    //   link.classList.toggle(
-    //     'active',
-    //     link.getAttribute('href') == '#' + pageId
-    //   );
-    // }
   },
-  
+
+
   init: function(){
     const thisApp = this;
+    thisApp.initPages();
     thisApp.initData();
     thisApp.initMenu();
-    thisApp.initPages();
-    
-    
-    
-   
+
   },
 };
 app.init();

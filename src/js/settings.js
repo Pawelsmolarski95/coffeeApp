@@ -10,15 +10,16 @@ export const select = {
     upperArrow: '.upper',
     mostPopular: '.most-popular',
     contact: '#contact',
-    product: '#product',
+    product: '#products',
     about: '#about',
-    startingPage: '#product, #about',
+    startingPage: '#products, #about',
     home: '#home'
   }
 };
 export const classNames = {
   hidden: 'hidden',
   hiddenImage: 'hidden-image',
+  activePage: 'active'
 };
 export const templates = {
   coffeeList: Handlebars.compile(document.querySelector(select.templateOf.productContainer).innerHTML),
