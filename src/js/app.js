@@ -28,6 +28,18 @@ const app = {
         thisApp.data.products[productData].id,
         thisApp.data.products[productData]);
     }
+    const titleArray = [
+      'Home of Original Tastes',
+      'Real Venezuela, Real Coffee',
+      'Taste Real Venezuela'
+    ];  
+    console.log(titleArray[1]);
+    window.onload = function  newTitile() {
+      let randomTitle = Math.floor(Math.random() * (titleArray.length));
+      console.log(randomTitle);
+      document.querySelector('.randomTitle').innerHTML = titleArray[randomTitle];
+      
+    };
   },
   initPages: function(){
     const thisApp = this;
@@ -65,10 +77,10 @@ const app = {
     thisApp.upperArrow.addEventListener('click', function(){
       window.scrollTo(0, 800);
     });
-      
-      
+    
     
   },
+ 
   activePage: function(pageId){
     const thisApp = this;
     

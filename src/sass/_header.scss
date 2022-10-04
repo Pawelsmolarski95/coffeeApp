@@ -83,6 +83,13 @@
     background-color: $color-dark;
   }
 }
+.randomTitle {
+  display: block;
+  font-size: 90px;
+  letter-spacing: 9px;
+  word-spacing: 30px;
+}
+
 
 .container-header-bottom {
   margin-bottom: 80px;
@@ -108,6 +115,7 @@
     color: $color-light;
   }
 }
+
 
 
 /* menu hambuerger*/
@@ -161,6 +169,7 @@
   margin-top: 0px;
   transform: rotate(-405deg);
 }
+
 
 
 /* media */
