@@ -34,6 +34,7 @@ const app = {
     
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.containerOf.navLinks);
+    thisApp.upperArrow = document.querySelector(select.containerOf.upperArrow);
   
     const idFromHash = window.location.hash.replace('#/', '' );
     
@@ -61,6 +62,11 @@ const app = {
       });
       
     }
+    thisApp.upperArrow.addEventListener('click', function(){
+      window.scrollTo(0, 800);
+    });
+      
+      
     
   },
   activePage: function(pageId){

@@ -13,7 +13,6 @@
     position: absolute;
     opacity: 0.8;
     filter: contrast(120%),brightness(0.3);
-    
   }
 }
 
@@ -22,14 +21,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
-    
 }
 
-
 .container-header-top{
-  
-
   margin: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -47,7 +41,7 @@
     
 } 
 
-.nav a{
+.nav a {
   text-decoration: none;
   color: lightgrey;
   text-transform: uppercase;
@@ -70,28 +64,27 @@
     margin: 0;
   }
 
-  .left{
+  .left {
     text-align: left;
   }
 
-  .right{
+  .right {
     text-align: right;
     position: relative;
     display: block;
   }
 
-  .right::after{
+  .right::after { 
     height: 5px;
     content: "";
     width: 300px;
-    margin-top: 30px;
-    margin-left: 290px;
+    margin: 30px auto;
     display: block;
     background-color: $color-dark;
   }
 }
 
-.container-header-bottom{
+.container-header-bottom {
   margin-bottom: 80px;
   font-size: 28px;
   color: $color-light;
@@ -104,14 +97,136 @@
         
   }
 
-  i{
+  i {
     font-size: 30px;
     cursor: pointer;
   }
 
-  a{
+  a {
     text-decoration: none;
     font-size: 28px;
     color: $color-light;
   }
+}
+
+
+/* menu hambuerger*/
+
+ .menu-button-container {
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    display: none;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+.menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+.menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+.menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+
+/* media */
+
+/*hamburger menu */
+
+@media screen and (max-width: 767px) {
+  /* header-top*/
+  
+  .container-header-top {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .logo {
+    margin-right: 50px;
+  }
+  
+  .menu-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .nav {
+    margin-top: 10px;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    a {
+      font-size: 20px;
+    }
+  } 
+  .menu-button-container { 
+    display: flex;
+  }
+  .menu-toggle:checked ~ .nav {
+    display: flex;
+  }
+  
+  /* header-mid*/
+  
+  .container-header-mid {
+    font-size: 30px;
+    
+  
+  .left {
+    text-align: center;
+  }
+  
+  .right {
+    text-align: center;
+    position: relative;
+  }
+  
+  .right::after {
+    height: 5px;
+    content: "";
+    width: 150px;
+    margin: 30px auto;
+    display: block;
+    background-color: $color-dark;
+    }
+  } 
 }

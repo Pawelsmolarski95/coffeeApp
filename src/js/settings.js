@@ -13,7 +13,8 @@ export const select = {
     product: '#products',
     about: '#about',
     startingPage: '#products, #about',
-    home: '#home'
+    home: '#home',
+    
   }
 };
 export const classNames = {

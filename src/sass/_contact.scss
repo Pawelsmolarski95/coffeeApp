@@ -67,3 +67,17 @@ form textarea {
   letter-spacing: 2px;
   border: none;
 }
+
+@media screen and (max-width:767px) {
+  .contact-form form {
+    padding: 10px;
+  }
+  .contact-h1 h1::after {
+    height: 5px;
+    content: "";
+    width: 150px;
+    margin: 30px auto;
+    display: block;
+    background-color: $color-dark;
+  }
+}
