@@ -1,7 +1,6 @@
 export const select = {
   templateOf: {
     productContainer: '#template-product',
-    
   },
   containerOf: {
     allProducts: 'product-wrapper',
@@ -14,7 +13,6 @@ export const select = {
     about: '#about',
     startingPage: '#products, #about',
     home: '#home',
-    
   }
 };
 export const classNames = {
