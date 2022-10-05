@@ -13,6 +13,7 @@ export const select = {
     about: '#about',
     startingPage: '#products, #about',
     home: '#home',
+    carousel: '.main-carousel'
   }
 };
 export const classNames = {

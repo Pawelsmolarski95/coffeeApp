@@ -107,6 +107,18 @@ const app = {
       link.getAttribute('href') == '#' + pageId;
     }
   },
+  initWidgets(){
+    const thisApp = this;
+    thisApp.carousel = document.querySelector(select.containerOf.carousel);
+    // eslint-disable-next-line no-undef
+    thisApp.flkty = new Flickity(thisApp.carousel,{
+      wrapAround: true,
+      autoPlay: 1500,
+      initialIndex: 1,
+      prevNextButtons: false,
+      cellAlign: 'left',
+    }); 
+  },
 
 
   init: function(){
@@ -114,7 +126,7 @@ const app = {
     thisApp.initPages();
     thisApp.initData();
     thisApp.initMenu();
-
+    thisApp.initWidgets();
   },
 };
 app.init();

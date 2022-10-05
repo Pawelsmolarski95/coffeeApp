@@ -64,17 +64,7 @@
     margin: 0;
   }
 
-  .left {
-    text-align: left;
-  }
-
-  .right {
-    text-align: right;
-    position: relative;
-    display: block;
-  }
-
-  .right::after { 
+  .randomTitle::after { 
     height: 5px;
     content: "";
     width: 300px;
@@ -83,16 +73,18 @@
     background-color: $color-dark;
   }
 }
+
 .randomTitle {
   display: block;
   font-size: 90px;
-  letter-spacing: 9px;
-  word-spacing: 30px;
+  letter-spacing: 13px;
+  word-spacing: 40px;
+  text-align: center;
+  
 }
 
-
 .container-header-bottom {
-  margin-bottom: 80px;
+  margin-bottom: 90px;
   font-size: 28px;
   color: $color-light;
   text-align: center;
@@ -115,9 +107,6 @@
     color: $color-light;
   }
 }
-
-
-
 /* menu hambuerger*/
 
 .menu-button-container {
@@ -169,9 +158,6 @@
   margin-top: 0px;
   transform: rotate(-405deg);
 }
-
-
-
 /* media */
 
 /*hamburger menu */
@@ -221,24 +207,18 @@
   
   .container-header-mid {
     font-size: 30px;
-    
-  
-    .left {
-      text-align: center;
-    }
-  
-    .right {
-      text-align: center;
-      position: relative;
-    }
-  
-    .right::after {
+   
+    .randomTitle:after {
       height: 5px;
       content: "";
       width: 150px;
-      margin: 30px auto;
+      margin: 0 auto;
       display: block;
       background-color: $color-dark;
+    }
+    .randomTitle{
+      font-size: 48px;
+      word-spacing: 14px;
     }
   } 
 }

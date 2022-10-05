@@ -8,6 +8,7 @@
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -31,18 +32,8 @@
           </div>
         </div>
         <div class="container-header-mid">
-          
           <div class="randomTitle" id="randomTitle">
-            <!-- <span class="left">Home of </span></h1>
-            <h1><span class="right">orginal tastes </span> -->
-            
           </div>
-          <!-- <div class="two" id="two"><h1><span class="left">Real Venezuela,  </span></h1>
-            <h1><span class="right"> Real Coffee</span></h1>
-          </div>
-          <div class="three" id="three"><h1><span class="left">Taste Real </span></h1>
-            <h1><span class="right">Venezuela</span></h1>
-          </div> -->
         </div>
       <div class="container-header-bottom">
         <a href="#products"><h3>Discover</h3>
@@ -60,18 +51,37 @@
         </div>
     </section>
     <section id="about" class="sectionAbout" >
-      <img src="./images/about-us.jpg" alt="about">
       <div class="container container-about">
         <div class="container-about-h1">
           <h1><span>About us</span></h1>
         </div>
-        <div class="container-about-p">
-          <p>Who are we? Just a bunch of firends with a love for a good cofee and desire to create something new, something orginal.</p>
-          <p>Our coffees reflect us - young, wild and free. We are on the journey of new tastes.</p>
-          <p>Join us!</p>
+        <div class="main-carousel">
+          <div class="carousel-cell">
+            <img src="./images/1.png" alt="coffee">
+            <div class="inside-carosusel-text">
+              <h3>Lorem Ipsum</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <p>- Margaret Osborne</p>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <img src="./images/2.png" alt="coffee">
+            <div class="inside-carosusel-text">
+              <h3>Lorem Ipsum</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <p>- Margaret Osborne</p>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <img src="./images/3.png" alt="coffee">
+            <div class="inside-carosusel-text">
+              <h3>Lorem Ipsum</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <p>- Margaret Osborne</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     <section id="contact"  class="sectionContact">
       <div class=" container contact-wrapper ">
         <div class="">
@@ -113,11 +123,18 @@
         </div>
       </div>
       <div class="product-image">
-        <img src="{{ images }}" alt="{{ name }}">
+        <div class="promo">
+          <div class="priceDiv">
+            <h5><span class="oldPrice">{{ oldPrice }}$</span></h5>
+            <h5><span class="newPrice">{{ newPrice }}$</span></h5>
+          </div>
+          <img src="{{ images }}" alt="{{ name }}">
+        </div>       
       </div>
     </div>
     
     </script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
 <script src="js/app.js" type="module"></script>
 </body>
