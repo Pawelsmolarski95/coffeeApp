@@ -1,17 +1,66 @@
 /* About */
 
-#about{
-  position: relative;
-  height: 95vh;
+.sectionAbout {
+  height: 120vh;
   background-image: url(../images/about-us.jpg);
   background-position: center;
   background-size: cover;
+  
 }
+
+.main-carousel{
+  height: 450px;
+
+  margin-top: 2vh;
+  
+}
+
+.carousel-cell{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  
+}
+
+.inside-carosusel-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:30px;
+  color: $color-light;
+  font-size: 32px;
+  line-height: 1.2;
+  
+  
+
+  h3 {
+    
+    font-size: 40px;
+    font-weight: 700;
+  }
+  img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+  }
+  p {
+    font-style: italic;
+  }
+  span {
+    font-weight: 900;
+  }
+  
+}
+  
   
 
 .container-about {
   display: flex;
   flex-direction: column;
+  
   gap: 20px;
 }
 
@@ -33,49 +82,8 @@
   background-color: $color-dark;
 }
 
-
-.main-carousel{
-  height: 500px;
-}
-.carousel-cell{
-  width: 100%;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap:10px;
-  img{
-    width: 300px;
-    height: 300px;
-  }
-}
-.inside-carosusel-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  h3 {
-    text-transform: uppercase;
-  }
-  :nth-child(3){
-    font-style: italic;
-  }
-}
-
 @media screen and (max-width:767px) {
-  .container-about-p{ 
-    padding: 24px 10px;
-
-    p {
-      font-size: 24px;
-      text-align: center;
-    }
-  }
   
-  .container-about-p p:nth-last-child(1) {
-    margin: 0 auto;
-  }
-
   .container-about-h1 span::after{
     height: 5px;
     content: "";
@@ -83,5 +91,46 @@
     margin: 30px auto;
     display: block;
     background-color: $color-dark;
+  }
+  .main-carousel{
+    height:450px;
+    width: 300px;
+    margin-top: 2vh;
+    text-align: center;
+    
+  }
+  .inside-carosusel-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+    color: $color-light;
+    font-size: 18px;
+   
+    h3 {
+      
+      font-size: 24px;
+      font-weight: 700;
+    }
+    img {
+      height: 100px;
+      width: 100px;
+      object-fit: cover;
+    }
+  }
+  .carousel-cell{
+    width: 100%;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-about {
+    justify-content: center;
+    align-items: center;
+  }
+  .flickity-viewport{
+    height: 550px;
   }
 }

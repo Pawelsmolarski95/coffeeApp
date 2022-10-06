@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { classNames, select, settings} from './settings.js';
 import Product from './components/Products.js';
 const app = {
@@ -107,26 +108,27 @@ const app = {
       link.getAttribute('href') == '#' + pageId;
     }
   },
-  initWidgets(){
+  initWidget() {
     const thisApp = this;
     thisApp.carousel = document.querySelector(select.containerOf.carousel);
     // eslint-disable-next-line no-undef
     thisApp.flkty = new Flickity(thisApp.carousel,{
       wrapAround: true,
-      autoPlay: 1500,
+      autoPlay: true,
       initialIndex: 1,
       prevNextButtons: false,
       cellAlign: 'left',
     }); 
   },
 
-
   init: function(){
     const thisApp = this;
+    
     thisApp.initPages();
     thisApp.initData();
     thisApp.initMenu();
-    thisApp.initWidgets();
+    thisApp.initWidget();
+    
   },
 };
 app.init();
