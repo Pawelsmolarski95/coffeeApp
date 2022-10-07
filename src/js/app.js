@@ -18,7 +18,7 @@ const app = {
         console.log(thisApp.data.products);
         //execute initMenu method
         thisApp.initMenu();
-        
+        thisApp.renederMostPopular();
       });
     console.log('thisApp.date', JSON.stringify(thisApp.data));
   },
@@ -29,21 +29,6 @@ const app = {
         thisApp.data.products[productData].id,
         thisApp.data.products[productData]);
     }
-    const mostPopular = document.querySelector(select.containerOf.mostPopular);
-    
-    for (let productData in thisApp.data.products){
-      console.log(thisApp.data.products[productData]);
-      const popularObj = thisApp.data.products[productData];
-      for (const key in popularObj) {
-        if (popularObj.hasOwnProperty(key)) {
-          console.log(`${key}: ${popularObj[key]}`);
-        }
-      }
-      if(thisApp.data.products[productData].mostPopular == 'true') {
-        mostPopular.classList.remove(classNames.hiddenImage);
-      }
-    }
-    
     const titleArray = [
       'Home of Original Tastes',
       'Real Venezuela, Real Coffee',
@@ -52,11 +37,30 @@ const app = {
     console.log(titleArray[1]);
     window.onload = function  newTitile() {
       let randomTitle = Math.floor(Math.random() * (titleArray.length));
-      console.log(randomTitle);
+     
       document.querySelector('.randomTitle').innerHTML = titleArray[randomTitle];
       
     };
   },
+  renederMostPopular(){
+    const thisApp = this;
+    const mostPopular = document.querySelector(select.containerOf.mostPopular);
+    
+   
+    for (let productData in thisApp.data.products){
+      console.log(thisApp.data.products[productData]);
+     
+      if(thisApp.data.products[productData].mostPopular == 'true') {
+        mostPopular.classList.remove(classNames.hiddenImage);
+      }
+      
+    }
+   
+   
+  },
+ 
+   
+  
   initPages: function(){
     const thisApp = this;
     
@@ -67,7 +71,7 @@ const app = {
     const idFromHash = window.location.hash.replace('#/', '' );
     
     let pageMatchingHash = thisApp.pages[0].id;
-    console.log(pageMatchingHash);
+    
     
     for(let page of thisApp.pages) {
       if(page.id == idFromHash){
@@ -144,6 +148,7 @@ const app = {
     thisApp.initPages();
     thisApp.initData();
     thisApp.initMenu();
+    thisApp.renederMostPopular();
     
     
   },
