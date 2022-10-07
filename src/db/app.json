@@ -7,7 +7,7 @@
             "roasting": 5,
             "intensity": 6,
             "images": "images/coffee-1.png",
-            "mostPopular": "false",
+            "mostPopular": "true",
             "oldPrice": 30,
             "newPrice": 28
         },
@@ -19,7 +19,7 @@
             "roasting": 8,
             "intensity": 9,
             "images": "images/coffee-2.png",
-            "mostPopular": "true",
+            "mostPopular": "false",
             "oldPrice": 26,
             "newPrice": 22
         },

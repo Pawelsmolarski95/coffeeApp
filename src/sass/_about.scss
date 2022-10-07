@@ -1,7 +1,7 @@
 /* About */
 
 .sectionAbout {
-  height: 95vh;
+  height: 100vh;
   background-image: url(../images/about-us.jpg);
   background-position: center;
   background-size: cover;
@@ -46,8 +46,8 @@
   }
 
   img {
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     object-fit: cover;
   }
 
@@ -144,6 +144,7 @@
   .flickity-viewport{
     height: 550px;
   }
+
   .sectionAbout {
     height: 120vh;
   }

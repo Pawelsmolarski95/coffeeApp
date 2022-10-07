@@ -29,6 +29,21 @@ const app = {
         thisApp.data.products[productData].id,
         thisApp.data.products[productData]);
     }
+    const mostPopular = document.querySelector(select.containerOf.mostPopular);
+    
+    for (let productData in thisApp.data.products){
+      console.log(thisApp.data.products[productData]);
+      const popularObj = thisApp.data.products[productData];
+      for (const key in popularObj) {
+        if (popularObj.hasOwnProperty(key)) {
+          console.log(`${key}: ${popularObj[key]}`);
+        }
+      }
+      if(thisApp.data.products[productData].mostPopular == 'true') {
+        mostPopular.classList.remove(classNames.hiddenImage);
+      }
+    }
+    
     const titleArray = [
       'Home of Original Tastes',
       'Real Venezuela, Real Coffee',
@@ -119,6 +134,7 @@ const app = {
       initialIndex: 2,
       prevNextButtons: false,
       cellAlign: 'left',
+      pageDots: false,
     }); 
   },
 
@@ -128,7 +144,7 @@ const app = {
     thisApp.initPages();
     thisApp.initData();
     thisApp.initMenu();
-    // thisApp.initWidget();
+    
     
   },
 };
