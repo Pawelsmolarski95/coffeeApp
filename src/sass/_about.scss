@@ -1,7 +1,7 @@
 /* About */
 
 .sectionAbout {
-  height: 120vh;
+  height: 95vh;
   background-image: url(../images/about-us.jpg);
   background-position: center;
   background-size: cover;
@@ -10,18 +10,21 @@
 
 .main-carousel{
   height: 450px;
-
-  margin-top: 2vh;
-  
+  z-index: 99;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  display: block;
 }
 
 .carousel-cell{
   width: 100%;
-  height: 500px;
+  height: 370px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  z-index: 99;
+  
   
 }
 
@@ -29,7 +32,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:30px;
+  gap: 30px;
   color: $color-light;
   font-size: 32px;
   line-height: 1.2;
@@ -41,14 +44,17 @@
     font-size: 40px;
     font-weight: 700;
   }
+
   img {
     height: 300px;
     width: 300px;
     object-fit: cover;
   }
+
   p {
     font-style: italic;
   }
+
   span {
     font-weight: 900;
   }
@@ -83,7 +89,6 @@
 }
 
 @media screen and (max-width:767px) {
-  
   .container-about-h1 span::after{
     height: 5px;
     content: "";
@@ -92,18 +97,20 @@
     display: block;
     background-color: $color-dark;
   }
+
   .main-carousel{
-    height:450px;
+    height: 450px;
     width: 300px;
     margin-top: 2vh;
     text-align: center;
     
   }
+
   .inside-carosusel-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:5px;
+    gap: 5px;
     color: $color-light;
     font-size: 18px;
    
@@ -112,25 +119,32 @@
       font-size: 24px;
       font-weight: 700;
     }
+
     img {
       height: 100px;
       width: 100px;
       object-fit: cover;
     }
   }
+
   .carousel-cell{
     width: 100%;
-    height: 470px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .container-about {
     justify-content: center;
     align-items: center;
   }
+
   .flickity-viewport{
     height: 550px;
+  }
+  .sectionAbout {
+    height: 120vh;
   }
 }

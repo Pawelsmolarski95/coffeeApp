@@ -95,6 +95,7 @@ const app = {
       if (pageId == 'home') {
         thisApp.about.classList.add(classNames.activePage);
         thisApp.products.classList.add(classNames.activePage);
+        thisApp.initWidget();
         
       } else if (pageId == 'products')  {
         thisApp.products.classList.add(classNames.activePage);
@@ -115,7 +116,7 @@ const app = {
     thisApp.flkty = new Flickity(thisApp.carousel,{
       wrapAround: true,
       autoPlay: true,
-      initialIndex: 1,
+      initialIndex: 2,
       prevNextButtons: false,
       cellAlign: 'left',
     }); 
@@ -127,7 +128,7 @@ const app = {
     thisApp.initPages();
     thisApp.initData();
     thisApp.initMenu();
-    thisApp.initWidget();
+    // thisApp.initWidget();
     
   },
 };
